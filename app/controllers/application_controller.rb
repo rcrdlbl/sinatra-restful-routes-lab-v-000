@@ -32,6 +32,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/recipes/:id' do
+    @recipe = Recipe.find_by_id(params[:id])
     
   end
 end
